@@ -1,10 +1,10 @@
 <?php
 
-namespace Omnipay\Mollie\Message\Request;
+namespace Omnipay\Mpesa\Message\Request;
 
 use Omnipay\Common\Exception\InvalidRequestException;
 use Omnipay\Common\Message\ResponseInterface;
-use Omnipay\Mollie\Message\Response\FetchPaymentMethodsResponse;
+use Omnipay\Mpesa\Message\Response\FetchPaymentMethodsResponse;
 
 /**
  * Retrieve all available payment methods.

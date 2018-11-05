@@ -1,9 +1,9 @@
 <?php
 
-namespace Omnipay\Mollie\Message\Request;
+namespace Omnipay\Mpesa\Message\Request;
 
 use Omnipay\Common\Exception\InvalidRequestException;
-use Omnipay\Mollie\Message\Response\FetchIssuersResponse;
+use Omnipay\Mpesa\Message\Response\FetchIssuersResponse;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -14,7 +14,7 @@ use Psr\Http\Message\ResponseInterface;
 class FetchIssuersRequest extends AbstractMollieRequest
 {
     /**
-     * Since the Issuer endpoint got removed in the Mollie v2 api.
+     * Since the Issuer endpoint got removed in the Mpesa v2 api.
      * We now use the include parameter on the get-method endpoint.
      *
      * @var string

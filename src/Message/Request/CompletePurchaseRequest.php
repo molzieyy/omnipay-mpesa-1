@@ -1,9 +1,9 @@
 <?php
 
-namespace Omnipay\Mollie\Message\Request;
+namespace Omnipay\Mpesa\Message\Request;
 
 use Omnipay\Common\Exception\InvalidRequestException;
-use Omnipay\Mollie\Message\Response\CompletePurchaseResponse;
+use Omnipay\Mpesa\Message\Response\CompletePurchaseResponse;
 
 /**
  * Retrieve a single payment object by its payment token.

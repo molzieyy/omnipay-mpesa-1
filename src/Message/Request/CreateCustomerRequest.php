@@ -1,13 +1,13 @@
 <?php
 
-namespace Omnipay\Mollie\Message\Request;
+namespace Omnipay\Mpesa\Message\Request;
 
 use Omnipay\Common\Exception\InvalidRequestException;
 use Omnipay\Common\Message\AbstractRequest;
-use Omnipay\Mollie\Message\Response\CreateCustomerResponse;
+use Omnipay\Mpesa\Message\Response\CreateCustomerResponse;
 
 /**
- * Creates a simple minimal representation of a customer in the Mollie API.
+ * Creates a simple minimal representation of a customer in the Mpesa API.
  *
  * @see https://docs.mollie.com/reference/v2/customers-api/create-customer
  */

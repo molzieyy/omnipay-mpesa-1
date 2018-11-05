@@ -1,10 +1,10 @@
 <?php
 
-namespace Omnipay\Mollie\Message\Request;
+namespace Omnipay\Mpesa\Message\Request;
 
 use Omnipay\Common\Exception\InvalidRequestException;
 use Omnipay\Common\Message\AbstractRequest;
-use Omnipay\Mollie\Message\Response\RevokeCustomerMandateResponse;
+use Omnipay\Mpesa\Message\Response\RevokeCustomerMandateResponse;
 
 /**
  * Revoke a customer's mandate.

@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Omnipay\Mollie\Message\Request;
+namespace Omnipay\Mpesa\Message\Request;
 
 use function is_string;
 use Omnipay\Common\Exception\InvalidRequestException;
 use Omnipay\Common\Message\ResponseInterface;
-use Omnipay\Mollie\Message\Response\RefundResponse;
+use Omnipay\Mpesa\Message\Response\RefundResponse;
 
 /**
  * Most payment methods support refunds. This means you can request your payment to be refunded to the consumer.

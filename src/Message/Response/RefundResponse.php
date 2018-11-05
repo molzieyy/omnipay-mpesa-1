@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\Mollie\Message\Response;
+namespace Omnipay\Mpesa\Message\Response;
 
 /**
  * @see https://docs.mollie.com/reference/v2/refunds-api/create-refund

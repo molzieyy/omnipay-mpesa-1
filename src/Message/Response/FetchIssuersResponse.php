@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\Mollie\Message\Response;
+namespace Omnipay\Mpesa\Message\Response;
 
 use Omnipay\Common\Issuer;
 use Omnipay\Common\Message\FetchIssuersResponseInterface;

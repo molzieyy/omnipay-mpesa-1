@@ -1,11 +1,11 @@
 <?php
 
-namespace Omnipay\Mollie\Message\Request;
+namespace Omnipay\Mpesa\Message\Request;
 
 use Omnipay\Common\Message\AbstractRequest;
 
 /**
- * This class holds all the common things for all of Mollie requests.
+ * This class holds all the common things for all of Mpesa requests.
  *
  * @see https://docs.mollie.com/index
  */

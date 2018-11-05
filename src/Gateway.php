@@ -1,24 +1,24 @@
 <?php
 
-namespace Omnipay\Mollie;
+namespace Omnipay\Mpesa;
 
 use Omnipay\Common\AbstractGateway;
 use Omnipay\Common\Message\RequestInterface;
-use Omnipay\Mollie\Message\Request\CompletePurchaseRequest;
-use Omnipay\Mollie\Message\Request\CreateCustomerMandateRequest;
-use Omnipay\Mollie\Message\Request\CreateCustomerRequest;
-use Omnipay\Mollie\Message\Request\FetchCustomerMandatesRequest;
-use Omnipay\Mollie\Message\Request\FetchCustomerRequest;
-use Omnipay\Mollie\Message\Request\FetchIssuersRequest;
-use Omnipay\Mollie\Message\Request\FetchPaymentMethodsRequest;
-use Omnipay\Mollie\Message\Request\FetchTransactionRequest;
-use Omnipay\Mollie\Message\Request\PurchaseRequest;
-use Omnipay\Mollie\Message\Request\RefundRequest;
-use Omnipay\Mollie\Message\Request\RevokeCustomerMandateRequest;
-use Omnipay\Mollie\Message\Request\UpdateCustomerRequest;
+use Omnipay\Mpesa\Message\Request\CompletePurchaseRequest;
+use Omnipay\Mpesa\Message\Request\CreateCustomerMandateRequest;
+use Omnipay\Mpesa\Message\Request\CreateCustomerRequest;
+use Omnipay\Mpesa\Message\Request\FetchCustomerMandatesRequest;
+use Omnipay\Mpesa\Message\Request\FetchCustomerRequest;
+use Omnipay\Mpesa\Message\Request\FetchIssuersRequest;
+use Omnipay\Mpesa\Message\Request\FetchPaymentMethodsRequest;
+use Omnipay\Mpesa\Message\Request\FetchTransactionRequest;
+use Omnipay\Mpesa\Message\Request\PurchaseRequest;
+use Omnipay\Mpesa\Message\Request\RefundRequest;
+use Omnipay\Mpesa\Message\Request\RevokeCustomerMandateRequest;
+use Omnipay\Mpesa\Message\Request\UpdateCustomerRequest;
 
 /**
- * Mollie Gateway provides a wrapper for Mollie API.
+ * Mpesa Gateway provides a wrapper for Mpesa API.
  * Please have a look at links below to have a high-level overview and see the API specification
  *
  * @see https://www.mollie.com/en/developers
@@ -41,7 +41,7 @@ class Gateway extends AbstractGateway
      */
     public function getName()
     {
-        return 'Mollie';
+        return 'Mpesa';
     }
 
     /**
