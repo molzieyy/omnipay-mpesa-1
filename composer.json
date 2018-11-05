@@ -1,0 +1,53 @@
+{
+    "name": "deadangroup/omnipay-mpesa",
+    "type": "library",
+    "description": "Mpesa driver for the Deadan payment processing library",
+    "keywords": [
+        "gateway",
+        "merchant",
+        "mpesa",
+        "omnipay",
+        "pay",
+        "payment"
+    ],
+    "homepage": "https://github.com/deadangroup/omnipay-mpesa",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Deadan Group",
+            "email": "hi@deadangroup.com"
+        },
+        {
+            "name": "Deadan Contributors",
+            "homepage": "https://github.com/deadangroup/omnipay-mpesa/contributors"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Deadan\\Mpesa\\" : "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Deadan\\Mpesa\\Test\\": "tests/" }
+    },
+    "require": {
+        "omnipay/common": "^3.0.1"
+    },
+    "require-dev": {
+        "omnipay/tests": "^3.1",
+        "squizlabs/php_codesniffer": "^3",
+        "phpro/grumphp": "^0.14",
+        "phpmd/phpmd": "^2",
+        "overtrue/phplint": "^1",
+        "jakub-onderka/php-parallel-lint": "^1"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.1.x-dev"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 src/",
+        "fix-style": "phpcbf -p --standard=PSR2 src/"
+    },
+    "prefer-stable": true
+}
