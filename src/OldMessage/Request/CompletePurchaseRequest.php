@@ -3,7 +3,7 @@
 namespace Omnipay\Mpesa\Message\Request;
 
 use Omnipay\Common\Exception\InvalidRequestException;
-use Omnipay\Mpesa\Message\Response\CompletePurchaseResponse;
+use Omnipay\Mpesa\Message\Response\CompletePurchaseStatusResponse;
 
 /**
  * Retrieve a single payment object by its payment token.
@@ -36,12 +36,12 @@ class CompletePurchaseRequest extends FetchTransactionRequest
 
     /**
      * @param array $data
-     * @return CompletePurchaseResponse
+     * @return CompletePurchaseStatusResponse
      */
     public function sendData($data)
     {
         $response = $this->sendRequest(self::GET, '/payments/' . $data['id']);
 
-        return $this->response = new CompletePurchaseResponse($this, $response);
+        return $this->response = new CompletePurchaseStatusResponse($this, $response);
     }
 }

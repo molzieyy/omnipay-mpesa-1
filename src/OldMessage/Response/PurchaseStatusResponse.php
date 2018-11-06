@@ -5,7 +5,7 @@ namespace Omnipay\Mpesa\Message\Response;
 /**
  * @see https://docs.mollie.com/reference/v2/payments-api/create-payment
  */
-class PurchaseResponse extends FetchTransactionResponse
+class PurchaseStatusResponse extends TransactionStatusResponse
 {
     /**
      * When you do a `purchase` the request is never successful because

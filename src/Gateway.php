@@ -19,10 +19,9 @@ use Omnipay\Mpesa\Message\Request\UpdateCustomerRequest;
 
 /**
  * Mpesa Gateway provides a wrapper for Mpesa API.
- * Please have a look at links below to have a high-level overview and see the API specification
+ * Please have a look at link below to have a high-level overview and see the API specification
  *
- * @see https://www.mollie.com/en/developers
- * @see https://docs.mollie.com/index
+ * @see http://developer.safaricom.co.ke/
  *
  * @method RequestInterface authorize(array $options = array())
  * @method RequestInterface completeAuthorize(array $options = array())
@@ -75,134 +74,11 @@ class Gateway extends AbstractGateway
      * @param  array $parameters
      * @return FetchIssuersRequest
      */
-    public function fetchIssuers(array $parameters = [])
+    public function STKStatus(array $parameters = [])
     {
         /** @var FetchIssuersRequest $request */
         $request = $this->createRequest(FetchIssuersRequest::class, $parameters);
 
         return $request;
-    }
-
-    /**
-     * @param  array $parameters
-     * @return FetchPaymentMethodsRequest
-     */
-    public function fetchPaymentMethods(array $parameters = [])
-    {
-        /** @var FetchPaymentMethodsRequest $request */
-        $request = $this->createRequest(FetchPaymentMethodsRequest::class, $parameters);
-
-        return $request;
-    }
-
-    /**
-     * @param  array $parameters
-     * @return FetchTransactionRequest
-     */
-    public function fetchTransaction(array $parameters = [])
-    {
-        /** @var FetchTransactionRequest $request */
-        $request = $this->createRequest(FetchTransactionRequest::class, $parameters);
-
-        return $request;
-    }
-
-    /**
-     * @param  array $parameters
-     * @return PurchaseRequest
-     */
-    public function purchase(array $parameters = [])
-    {
-        /** @var PurchaseRequest $request */
-        $request = $this->createRequest(PurchaseRequest::class, $parameters);
-
-        return $request;
-    }
-
-    /**
-     * @param  array $parameters
-     * @return CompletePurchaseRequest
-     */
-    public function completePurchase(array $parameters = [])
-    {
-        /** @var CompletePurchaseRequest $request */
-        $request = $this->createRequest(CompletePurchaseRequest::class, $parameters);
-
-        return $request;
-    }
-
-    /**
-     * @param  array $parameters
-     * @return RefundRequest
-     */
-    public function refund(array $parameters = [])
-    {
-        /** @var RefundRequest $request */
-        $request = $this->createRequest(RefundRequest::class, $parameters);
-
-        return $request;
-    }
-
-    /**
-     * @param  array $parameters
-     * @return CreateCustomerRequest
-     */
-    public function createCustomer(array $parameters = [])
-    {
-        /** @var CreateCustomerRequest $request */
-        $request = $this->createRequest(CreateCustomerRequest::class, $parameters);
-
-        return $request;
-    }
-
-    /**
-     * @param  array $parameters
-     * @return UpdateCustomerRequest
-     */
-    public function updateCustomer(array $parameters = [])
-    {
-        /** @var UpdateCustomerRequest $request */
-        $request = $this->createRequest(UpdateCustomerRequest::class, $parameters);
-
-        return $request;
-    }
-
-    /**
-     * @param  array $parameters
-     * @return FetchCustomerRequest
-     */
-    public function fetchCustomer(array $parameters = [])
-    {
-        /** @var FetchCustomerRequest $request */
-        $request = $this->createRequest(FetchCustomerRequest::class, $parameters);
-
-        return $request;
-    }
-
-    /**
-     * @param array $parameters
-     * @return FetchCustomerMandatesRequest
-     */
-    public function fetchCustomerMandates(array $parameters = [])
-    {
-        return $this->createRequest(FetchCustomerMandatesRequest::class, $parameters);
-    }
-
-    /**
-     * @param array $parameters
-     * @return CreateCustomerMandateRequest
-     */
-    public function createCustomerMandate(array $parameters = [])
-    {
-        return $this->createRequest(CreateCustomerMandateRequest::class, $parameters);
-    }
-
-    /**
-     * @param array $parameters
-     * @return RevokeCustomerMandateRequest
-     */
-    public function revokeCustomerMandate(array $parameters = [])
-    {
-        return $this->createRequest(RevokeCustomerMandateRequest::class, $parameters);
     }
 }

@@ -4,7 +4,7 @@ namespace Omnipay\Mpesa\Message\Request;
 
 use Omnipay\Common\Exception\InvalidRequestException;
 use Omnipay\Common\Message\ResponseInterface;
-use Omnipay\Mpesa\Message\Response\PurchaseResponse;
+use Omnipay\Mpesa\Message\Response\PurchaseStatusResponse;
 
 /**
  * Create a payment with the Mpesa API.
@@ -150,12 +150,12 @@ class PurchaseRequest extends AbstractMollieRequest
 
     /**
      * @param array $data
-     * @return ResponseInterface|PurchaseResponse
+     * @return ResponseInterface|PurchaseStatusResponse
      */
     public function sendData($data)
     {
         $response = $this->sendRequest(self::POST, '/payments', $data);
 
-        return $this->response = new PurchaseResponse($this, $response);
+        return $this->response = new PurchaseStatusResponse($this, $response);
     }
 }

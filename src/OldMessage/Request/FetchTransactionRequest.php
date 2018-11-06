@@ -4,7 +4,7 @@ namespace Omnipay\Mpesa\Message\Request;
 
 use Omnipay\Common\Exception\InvalidRequestException;
 use Omnipay\Common\Message\ResponseInterface;
-use Omnipay\Mpesa\Message\Response\FetchTransactionResponse;
+use Omnipay\Mpesa\Message\Response\TransactionStatusResponse;
 
 /**
  * Retrieve a single payment object by its payment token.
@@ -29,12 +29,12 @@ class FetchTransactionRequest extends AbstractMollieRequest
 
     /**
      * @param array $data
-     * @return ResponseInterface|FetchTransactionResponse
+     * @return ResponseInterface|TransactionStatusResponse
      */
     public function sendData($data)
     {
         $response = $this->sendRequest(self::GET, '/payments/' . $data['id']);
 
-        return $this->response = new FetchTransactionResponse($this, $response);
+        return $this->response = new TransactionStatusResponse($this, $response);
     }
 }

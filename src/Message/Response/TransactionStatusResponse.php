@@ -4,10 +4,7 @@ namespace Omnipay\Mpesa\Message\Response;
 
 use Omnipay\Common\Message\RedirectResponseInterface;
 
-/**
- * @see https://docs.mollie.com/reference/v2/payments-api/get-payment
- */
-class FetchTransactionResponse extends AbstractMollieResponse implements RedirectResponseInterface
+class TransactionStatusResponse extends AbstractMpesaResponse implements RedirectResponseInterface
 {
     /**
      * {@inheritdoc}
@@ -15,14 +12,6 @@ class FetchTransactionResponse extends AbstractMollieResponse implements Redirec
     public function getRedirectMethod()
     {
         return 'GET';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function isRedirect()
-    {
-        return isset($this->data['_links']['checkout']['href']);
     }
 
     /**
@@ -40,17 +29,17 @@ class FetchTransactionResponse extends AbstractMollieResponse implements Redirec
     /**
      * {@inheritdoc}
      */
-    public function getRedirectData()
+    public function isRedirect()
     {
-        return null;
+        return isset($this->data['_links']['checkout']['href']);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function isSuccessful()
+    public function getRedirectData()
     {
-        return parent::isSuccessful();
+        return null;
     }
 
     /**
@@ -93,16 +82,16 @@ class FetchTransactionResponse extends AbstractMollieResponse implements Redirec
         return isset($this->data['status']) && 'expired' === $this->data['status'];
     }
 
-    public function isRefunded()
-    {
-        return isset($this->data['_links']['refunds']);
-    }
-
     public function isPartialRefunded()
     {
         return $this->isRefunded()
             && isset($this->data['amountRemaining'])
             && $this->data['amountRemaining']['value'] > 0;
+    }
+
+    public function isRefunded()
+    {
+        return isset($this->data['_links']['refunds']);
     }
 
     /**
@@ -157,6 +146,14 @@ class FetchTransactionResponse extends AbstractMollieResponse implements Redirec
         }
 
         return null;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function isSuccessful()
+    {
+        return parent::isSuccessful();
     }
 
     public function getCurrency()

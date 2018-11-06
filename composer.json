@@ -29,7 +29,8 @@
         "psr-4": { "Deadan\\Mpesa\\Test\\": "tests/" }
     },
     "require": {
-        "omnipay/common": "^3.0.1"
+        "omnipay/common": "^3.0.1",
+        "kabangi/mpesa": "^3.0"
     },
     "require-dev": {
         "omnipay/tests": "^3.1",
