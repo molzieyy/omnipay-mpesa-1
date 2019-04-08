@@ -1,5 +1,5 @@
 {
-    "name": "deadangroup/omnipay-mpesa",
+    "name": "weddingjuma/omnipay-mpesa",
     "type": "library",
     "description": "Mpesa driver for the Deadan payment processing library",
     "keywords": [
@@ -10,16 +10,17 @@
         "pay",
         "payment"
     ],
-    "homepage": "https://github.com/deadangroup/omnipay-mpesa",
+    "homepage": "https://github.com/weddingjuma/omnipay-mpesa",
+
     "license": "MIT",
     "authors": [
         {
-            "name": "Deadan Group",
-            "email": "hi@deadangroup.com"
+            "name": "IT BRAINS LTD",
+            "email": "info@itbrains.co.ke"
         },
         {
-            "name": "Deadan Contributors",
-            "homepage": "https://github.com/deadangroup/omnipay-mpesa/contributors"
+            "name": "weddingjuma Contributors",
+            "homepage": "https://github.com/weddingjuma/omnipay-mpesa/contributors"
         }
     ],
     "autoload": {
