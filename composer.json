@@ -1,7 +1,7 @@
 {
     "name": "weddingjuma/omnipay-mpesa",
     "type": "library",
-    "description": "Mpesa driver for the Deadan payment processing library",
+    "description": "Mpesa driver for omnipay payment processing library",
     "keywords": [
         "gateway",
         "merchant",
